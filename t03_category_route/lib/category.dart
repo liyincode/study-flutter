@@ -1,4 +1,3 @@
-
 // https://www.dartlang.org/guides/language/effective-dart/style#ordering
 import 'package:flutter/material.dart';
 
@@ -23,7 +22,10 @@ class Category extends StatelessWidget {
       {Key key,
       @required this.name,
       @required this.color,
-      @required this.iconLocation});
+      @required this.iconLocation})
+      : assert(name != null),
+        assert(color != null),
+        assert(iconLocation != null);
 
   /// Builds a custom widget that shows [Category] information.
   ///
@@ -72,7 +74,6 @@ class Category extends StatelessWidget {
                       style: Theme.of(context).textTheme.headline,
                     ),
                   ),
-
                 ],
               )),
         ),
